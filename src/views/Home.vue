@@ -71,7 +71,7 @@
 
 <script>
     import  Vue from 'vue'
-    import '../assets/css/index.css'
+    // import '../assets/css/index.css'
     import axios from 'axios'
     import url from '../assets/js/api.js'
 
