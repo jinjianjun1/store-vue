@@ -9,7 +9,8 @@ let mixin={
       },
     components:{
         foot,
-        swiper
+        swiper,
+        // slides
     }
 }
 

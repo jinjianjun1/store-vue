@@ -1,33 +1,23 @@
 <template>
-    <div class="home">
-        <div id="app" v-cloak>
+    <div class="home" >
+        <div id="app" v-cloak >
             <div class="container with-bottom-nav" style="min-height: 667px;">
                 <div class="content">
-                    <!--&lt;!&ndash; <div class="js-image-swiper-->
-               <!--custom-image-swiper  custom-image-swiper-single" data-images="1"> &ndash;&gt;-->
-                    <!--&lt;!&ndash;<swiper :lists="bannerlists" name="swip.vue" v-if="bannerlists"></swiper>&ndash;&gt;-->
-                    <!--&lt;!&ndash; </div> &ndash;&gt;-->
-                    <!--&lt;!&ndash; <a href="https://maijia.youzan.com/mars/notice/detail?id=" class="notice"></a> &ndash;&gt;-->
+                    <swiper :lists="bannerlists" name="swip.vue" v-if="bannerlists" style="min-width: 250px;"></swiper>
                     <div class="section-title">优店推荐</div>
                     <div class="section-content shops">
                         <div class="shop-wrap">
                             <div class="shop-item">
-                                <a href="https://h5.koudaitong.com/v2/showcase/feature?alias=zjtozpgn">
                                     <img class="fadeIn"
                                          src="https://img.yzcdn.cn/upload_files/2016/09/23/FgQUVNXnvpFKFl1DIN2LXhPA1cxy.png?imageView2/2/w/300/h/0/q/75/format/png">
-                                </a>
                             </div>
                             <div class="shop-item">
-                                <a href="https://h5.koudaitong.com/v2/feature/1e22e3vtu">
                                     <img class="fadeIn"
                                          src="https://img.yzcdn.cn/upload_files/2016/08/03/FqNGnCQS1eq9nIhRg48E_UfFf9K2.png?imageView2/2/w/300/h/0/q/75/format/png">
-                                </a>
                             </div>
                             <div class="shop-item">
-                                <a href="https://h5.koudaitong.com/v2/feature/8oups7zk">
                                     <img class="fadeIn"
                                          src="https://img.yzcdn.cn/upload_files/2016/08/05/Fv5hhMZrtPZQWE7fape0ddEYtSuy.png?imageView2/2/w/300/h/0/q/75/format/png">
-                                </a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +53,7 @@
                     <div class="js-show-find category-guid"></div>
                 </div>
             </div>
-            <!--<foot></foot>-->
+            <foot></foot>
         </div>
 
     </div>
@@ -72,6 +62,8 @@
 <script>
     import  Vue from 'vue'
     import '../assets/css/index.css'
+    import '../assets/css/common.css'
+
     import axios from 'axios'
     import url from '../assets/js/api.js'
 
@@ -93,9 +85,14 @@
             }
 
         },
+
         created(){
             this.getlists();
             this.getbanner()
+
+        },
+        mounted(){
+            console.log(this.bannerlists);
         },
         methods:{
             getlists(){
@@ -123,12 +120,13 @@
             getbanner(){
                 axios.get(url.banner).then(res=>{
                     this.bannerlists=res.data.lists
+                    console.log(this.bannerlists);
                 }).catch(err=>{
                     console.log(err)
                 })
             },
 
         },
-        mixin:[mixin]
+        mixins:[mixin]
     }
 </script>
