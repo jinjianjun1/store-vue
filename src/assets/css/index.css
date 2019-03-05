@@ -942,10 +942,10 @@ only screen and (min-device-pixel-ratio:1.5) {
 .hot-goods {
   overflow: hidden
 }
-
 .hot-goods ul {
   position: relative;
   padding: 0 6px;
+  height: 300px;
   zoom: 1
 }
 
@@ -1183,4 +1183,7 @@ only screen and (min-device-pixel-ratio:1.5) {
   to {
     opacity: 1
   }
+}
+.hot-goods .js-waterfull-wrap{
+  height: 300px;
 }

@@ -1,43 +1,60 @@
 <template>
     <div class="bottom-nav">
       <ul>
-        <li :class="{active:index==curIndex}"
-         v-for="(list,index) in hrefmsg" :key="index"
-         @click="changActive(list,index)">
-          <a>
-          <i :class="list.icon"></i>
-          <div>{{list.name}}</div>
-          </a>
-        </li>
+          <li :class="{active:currentItem===0}" @click="doSomething(0)">
+              <router-link :to="{name:'home'}">
+                  <i :class="'icon-home'"></i>
+                  <div>1</div>
+              </router-link>
+          </li>
+          <li :class="{active:currentItem===1}" @click="doSomething(1)">
+              <router-link :to="{name:'category'}">
+                  <i :class="'icon-home'"></i>
+                  <div>2</div>
+              </router-link>
+          </li>
+          <li :class="{active:currentItem===2}" @click="doSomething(2)">
+              <router-link :to="{name:'cart'}">
+                  <i :class="'icon-home'"></i>
+                  <div>3</div>
+              </router-link>
+          </li>
+          <li :class="{active:currentItem===3}" @click="doSomething(3)">
+              <router-link :to="{name:'member'}">
+                  <i :class="'icon-home'"></i>
+                  <div>4</div>
+              </router-link>
+          </li>
+
       </ul>
     </div>
 </template>
 
 <script>
-  import qs from 'qs'
-  let {index}=qs.parse(location.search.substr(1))//把路由上的参数?index=1 用qs解析成对象解构赋值给index 
+    import qs from 'qs'
+
+    let {index} = qs.parse(location.search.substr(1))//把路由上的参数?index=1 用qs解析成对象解构赋值给index
 
   let hrefmsg=[{
-    href:'/index.html',icon:'icon-home',name:'有赞'
+      icon: 'icon-home', name: 'home'
   },{
-        href:'/category.html',icon:'icon-category',name:'分类'
+      icon: 'icon-category', name: 'category'
   },{
-    href:'/cart.html',icon:'icon-cart',name:'购物车'
+      icon: 'icon-cart', name: 'cart'
   },{
-    href:'/member.html',icon:'icon-user',name:'我'
+      icon: 'icon-user', name: 'member'
 }]
     export default {
         data(){
           return {
             hrefmsg,
-            curIndex:parseInt(index)||0
+              currentItem:0
           }
         },
         methods:{
-          changActive(list,index){
-            // this.curIndex=index 页面进行跳转 重新渲染 则出现active回跳情况
-            location.href=`${list.href}?index=${index}`
-          }
+            doSomething(a){
+                this.currentItem=a
+            }
         }
     }
 </script>
