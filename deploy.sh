@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
-# 当发生错误时中止脚本
+# abort on errors
 set -e
 
 # build
-yarn build
+npm run build
 
 # navigate into the build output directory
 cd dist
