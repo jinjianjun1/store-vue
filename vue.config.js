@@ -1,6 +1,5 @@
 module.exports = {
     publicPath: process.env.NODE_ENV === 'production'
-        ? '/store-vue/dist'
+        ? '/store-vue/dist/'
         : '/',
-    productionSourceMap:false
 }
