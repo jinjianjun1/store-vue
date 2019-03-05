@@ -32,7 +32,7 @@
             <div class="search-content" style="display: none;"></div>
             <div class="content" style="height: 617px;">
               <div class="class-nav">
-                <div id="scroll-nav" style="height: 100%;">
+                <div id="scroll-nav" style="height: 100vh;">
                   <ul class="nav" id="scroll-nav-content" style="height: 540px; transform: translate3d(0px, 0px, 0px);">
                     <li class="category-name js-category-name "
                         :data-cid="list.id" v-for="(list,index) in toplists"
@@ -141,7 +141,6 @@
             </div>
           </div>
         </div>
-        <foot></foot>
       </div>
 
     </template>
@@ -179,7 +178,7 @@
       },
       getsublists(id, index) {
         this.topindex = index
-        if (index == 0) {
+        if (index ===0) {
           this.getranklists()
         } else {
           axios.get(url.sublist, {id}).then(res => {

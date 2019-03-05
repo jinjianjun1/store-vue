@@ -1,4 +1,3 @@
-import foot from '../../components/foot'
 import swiper from '../../components/swip.vue'
 let mixin={
     filters: {
@@ -8,7 +7,6 @@ let mixin={
         }  
       },
     components:{
-        foot,
         swiper,
         // slides
     }

@@ -1,13 +1,9 @@
 <template>
     <div class="home">
-        <div id="app" v-cloak>
-            <div class="container with-bottom-nav" style="min-height: 667px;">
+        <div  v-cloak>
+            <div class="container " style="min-height: 667px;">
                 <div class="content">
-                    <!-- <div class="js-image-swiper
-               custom-image-swiper  custom-image-swiper-single" data-images="1"> -->
-                    <!--<swiper :lists="bannerlists" name="swip.vue" v-if="bannerlists"></swiper>-->
-                    <!-- </div> -->
-                    <!-- <a href="https://maijia.youzan.com/mars/notice/detail?id=" class="notice"></a> -->
+                    <swiper :lists="bannerlists" name="swip.vue" v-if="bannerlists"></swiper>
                     <div class="section-title">优店推荐</div>
                     <div class="section-content shops">
                         <div class="shop-wrap">
@@ -63,7 +59,6 @@
                     <div class="js-show-find category-guid"></div>
                 </div>
             </div>
-            <foot></foot>
         </div>
 
     </div>
