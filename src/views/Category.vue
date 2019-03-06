@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <template>
       <div class="about">
-        <div  v-cloak v-if="this.rankData">
+        <div  v-cloak v-if="this.rankData" style="">
           <div class="container with-bottom-nav" style="min-height: 667px; height: 667px;">
             <div class="custom-search js-search-bar">
               <form>
@@ -127,8 +125,8 @@
                   <h3 class="category-title"> 热门分类 </h3>
                   <ul class="category-content">
                     <li class="category-item js-category-item" data-item-id="list.id" :data-item-name="list.name"
-                        v-for="(list,index) in subData.categoryList"
-                        @click="searchgoods(list)">
+                        v-for="(list,index) in subData.categoryList">
+                        <!-- @click="searchgoods(list)"-->
                       <img :src="list.img" :alt="list.name" class="category-img">
                       <span class="category-item-name">
                 水果            </span>
@@ -143,9 +141,7 @@
         </div>
       </div>
 
-    </template>
 
-  </div>
 </template>
 
 <script>
@@ -197,9 +193,9 @@
           console.log(err)
         })
       },
-      searchgoods(list) {
-        location.href = `search.html?id=${list.id}&keyword=${list.name}`
-      }
+      // searchgoods(list) {
+      //   location.href = `search.html?id=${list.id}&keyword=${list.name}`
+      // }
     },
     mixins: [mixin]
   }

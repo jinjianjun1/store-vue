@@ -4,25 +4,25 @@
           <li :class="{active:currentItem===0}" @click="doSomething(0)">
               <router-link :to="{name:'home'}">
                   <i :class="'icon-home'"></i>
-                  <div>1</div>
+                  <div>首页</div>
               </router-link>
           </li>
           <li :class="{active:currentItem===1}" @click="doSomething(1)">
               <router-link :to="{name:'category'}">
                   <i :class="'icon-category'"></i>
-                  <div>2</div>
+                  <div>分类</div>
               </router-link>
           </li>
           <li :class="{active:currentItem===2}" @click="doSomething(2)">
               <router-link :to="{name:'cart'}">
                   <i :class="'icon-cart'"></i>
-                  <div>3</div>
+                  <div>购物车</div>
               </router-link>
           </li>
           <li :class="{active:currentItem===3}" @click="doSomething(3)">
               <router-link :to="{name:'member'}">
                   <i :class="'icon-user'"></i>
-                  <div>4</div>
+                  <div>我</div>
               </router-link>
           </li>
 
