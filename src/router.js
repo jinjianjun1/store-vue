@@ -6,6 +6,7 @@ Vue.use(Router)
 
 export default new Router({
   base: '/store-vue/',
+  mode:"hash",
   routes: [
     {
       path: '/',
