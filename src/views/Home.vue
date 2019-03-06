@@ -42,7 +42,7 @@
                             infinite-scroll-distance="20">
                             <li v-for="(list,index) in lists " :key='index'>
                                 <div class="goods-item">
-                                    <a :href="'goods.html?id='+list.id">
+                                    <router-link to="goods"  >
                                         <div class="thumb img-box">
                                             <img class="fadeIn" :src="list.img">
                                         </div>
@@ -50,7 +50,7 @@
                                             <div class="title">{{list.name}}</div>
                                             <div class="price">{{list.price}}</div>
                                         </div>
-                                    </a>
+                                    </router-link>
                                 </div>
                             </li>
                         </ul>

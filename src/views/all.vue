@@ -23,19 +23,17 @@
 </template>
 
 <script>
-import Address from '../assets/js/addressService.js'
-export default {
+    import {mapState} from 'vuex'
+
+    export default {
     name:'all',
-    data(){
-        return {
-            lists:null
-        }
+
+    computed: {
+        ...mapState(["lists"])
     },
     created() {
-        Address.list().then(res=>{
-            this.lists=res.data.lists
-        })
-        console.log(this.lists);
+
+        this.$store.dispatch('getLists')
     },
     methods:{
         toEdit(list){
