@@ -15,18 +15,38 @@ export default new Router({
     {
       path: '/category',
       name: 'category',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('./views/Category.vue')
     },
     {
       path: '/cart',
       name: 'cart',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: () => import('./views/Cart.vue')
+    },
+    {
+      path: '/member',
+      name: 'member',
+      component: () => import('./views/Member.vue'),
+
+    },
+    {
+      path: '/address',
+      name: 'address',
+      component: () => import('./views/Address.vue'),
+      children: [{
+        path:'',
+        redirect:'all'
+      },
+        {
+        path: 'all',
+        component: () => import('./views/all.vue'),
+
+      },
+      {
+        path: 'form',
+        name:'form',
+        component: () => import('./views/form.vue'),
+        }]
+
     }
   ]
 })

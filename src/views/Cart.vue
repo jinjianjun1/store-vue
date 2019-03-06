@@ -163,9 +163,9 @@
 <script>
     import axios from 'axios'
     import url from '../assets/js/api.js'
-import '../assets/css/cart.css'
-import '../assets/css/cart_base.css'
-import '../assets/css/cart_trade.css'
+    import '../assets/css/cart.css'
+    import '../assets/css/cart_base.css'
+    import '../assets/css/cart_trade.css'
     import mixin from '../assets/js/mixin.js'
     import Volecity from 'velocity-animate'
 
@@ -311,12 +311,7 @@ import '../assets/css/cart_trade.css'
                 })
             },
             add(good) {
-                // axios.post(url.add, {
-                //   id: good.id,
-                //   number: 1
-                // }).then(res => {
-                //   good.number++
-                // })
+
                 Cart.add(good.id).then(res=>{
                     good.number++
                 })

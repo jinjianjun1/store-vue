@@ -2,7 +2,7 @@
   <div>
     <template>
       <div class="about">
-        <div id="app" v-cloak v-if="this.rankData">
+        <div  v-cloak v-if="this.rankData">
           <div class="container with-bottom-nav" style="min-height: 667px; height: 667px;">
             <div class="custom-search js-search-bar">
               <form>
