@@ -134,7 +134,7 @@
                                     <!-- 商品区域 -->
                                     <!-- 展现类型判断 -->
                                     <li class="js-goods-card goods-card small-pic card ">
-                                        <a href="https://h5.youzan.com/v2/goods/2ov83y79gkn38" class="js-goods link clearfix" target="_blank"
+                                        <a href="#" class="js-goods link clearfix" target="_blank"
                                            data-goods-id="343086880" title="【28号陆续发货】寻找田野|青海有机鲜枸杞 营养价值高安全无农残 吃水果一样吃枸杞">
                                             <div class="photo-block" data-width="750" data-height="750" style="background-color: rgb(255, 255, 255);">
                                                 <img class="goods-photo js-goods-lazy" data-src="https://img.yzcdn.cn/upload_files/2017/07/11/FoN0SazpvslhoiiyuHETeyWHqzTE.jpg?imageView2/2/w/280/h/280/q/75/format/webp"
@@ -152,7 +152,7 @@
                                         </a>
                                     </li>
                                     <li class="js-goods-card goods-card small-pic card ">
-                                        <a href="https://h5.youzan.com/v2/goods/2g06s483u55no" class="js-goods link clearfix" target="_blank"
+                                        <a href="#" class="js-goods link clearfix" target="_blank"
                                            data-goods-id="342718779" title="【米饭版和牛肉版】小龙坎方便火锅 只要一瓶矿泉水就能吃的地道四川火锅">
                                             <div class="photo-block" data-width="0" data-height="0" style="background-color: rgb(255, 255, 255);">
                                                 <img class="goods-photo js-goods-lazy" data-src="https://img.yzcdn.cn/upload_files/2017/07/04/FidWCdQxsEMojh63W8GK016mwPAo.jpg?imageView2/2/w/280/h/280/q/75/format/webp"
@@ -170,7 +170,7 @@
                                         </a>
                                     </li>
                                     <li class="js-goods-card goods-card small-pic card ">
-                                        <a href="https://h5.youzan.com/v2/goods/1y8wz9sm8da8k" class="js-goods link clearfix" target="_blank"
+                                        <a href="#" class="js-goods link clearfix" target="_blank"
                                            data-goods-id="342676309" title="寻找田野|绍兴黄酒 良宵 2012年古法手工原浆半干黄酒 礼盒装 送礼佳品">
                                             <div class="photo-block" data-width="750" data-height="750" style="background-color: rgb(255, 255, 255);">
                                                 <img class="goods-photo js-goods-lazy" data-src="https://img.yzcdn.cn/upload_files/2017/07/04/Fq1yXSOb84HmElu-Qgrm65EmAeIz.jpg?imageView2/2/w/280/h/280/q/75/format/webp"
@@ -188,7 +188,7 @@
                                         </a>
                                     </li>
                                     <li class="js-goods-card goods-card small-pic card ">
-                                        <a href="https://h5.youzan.com/v2/goods/27082kgcgmrqs" class="js-goods link clearfix" target="_blank"
+                                        <a href="#" class="js-goods link clearfix" target="_blank"
                                            data-goods-id="342108270" title="寻找田野|新疆库车小白杏 400g*4盒  长在树上的白色蜂蜜">
                                             <div class="photo-block" data-width="800" data-height="800" style="background-color: rgb(255, 255, 255);">
                                                 <img class="goods-photo js-goods-lazy" data-src="https://img.yzcdn.cn/upload_files/2017/07/12/FhxXtAXp1pEauruMKjw2QZCuCjbQ.jpg?imageView2/2/w/280/h/280/q/75/format/webp"
@@ -206,7 +206,7 @@
                                         </a>
                                     </li>
                                     <li class="js-goods-card goods-card small-pic card ">
-                                        <a href="https://h5.youzan.com/v2/goods/2fnugsg7z7xo4" class="js-goods link clearfix" target="_blank"
+                                        <a href="#" class="js-goods link clearfix" target="_blank"
                                            data-goods-id="341654863" title="寻找田野|无锡阳山水蜜桃 可以吸着吃的水蜜桃 单果200g礼盒装顺丰直达">
                                             <div class="photo-block" data-width="800" data-height="800" style="background-color: rgb(255, 255, 255);">
                                                 <img class="goods-photo js-goods-lazy" data-src="https://img.yzcdn.cn/upload_files/2017/07/12/FvDOdNLYTkgPg8_LC16vBTKUkpDp.jpg?imageView2/2/w/280/h/280/q/75/format/webp"
@@ -224,7 +224,7 @@
                                         </a>
                                     </li>
                                     <li class="js-goods-card goods-card small-pic card ">
-                                        <a href="https://h5.youzan.com/v2/goods/2ocrgu7fw6dic" class="js-goods link clearfix" target="_blank"
+                                        <a href="#" class="js-goods link clearfix" target="_blank"
                                            data-goods-id="340716475" title="认养一头牛 安全无添加的好牛奶/酸奶">
                                             <div class="photo-block" data-width="0" data-height="0" style="background-color: rgb(255, 255, 255);">
                                                 <img class="goods-photo js-goods-lazy" data-src="https://img.yzcdn.cn/upload_files/2017/06/14/FlAhOUgjHk6uwBhTmMW95hHPlVJh.jpg?imageView2/2/w/280/h/280/q/75/format/webp"
@@ -438,11 +438,11 @@
                             </div>
                             <!-- 立即购买 -->
                             <div class="big-btn-1-1" v-show="skuType===3" >
-                                <a href="javascript:;" class="js-confirm-it big-btn red-btn main-btn">下一步</a>
+                                    <a href="javascript:;" class="js-confirm-it big-btn red-btn main-btn">下一步</a>
                             </div>
                             <!-- 选择规格 -->
                             <div class="big-btn-2-1" v-show="skuType===1">
-                                <a href="javascript:;" @click="addCart" class="js-mutiBtn-confirm cart big-btn orange-btn vice-btn">加入购物车</a>
+                                <router-link :to="{name:'cart'}" @click="addCart" class="js-mutiBtn-confirm cart big-btn orange-btn vice-btn">加入购物车</router-link>
                                 <a href="javascript:;" class="js-mutiBtn-confirm confirm big-btn red-btn main-btn">立即购买</a>
                             </div>
                         </div>
@@ -460,12 +460,21 @@
 </template>
 
 <script>
+    import '../assets/css/goods.css'
+    import '../assets/css/goods_base.css'
+    import '../assets/css/goods_common.css'
+    import '../assets/css/goods_custom.css'
+    import '../assets/css/goods_mars.css'
+    import '../assets/css/goods_sku.css'
+    import '../assets/css/goods_theme.css'
+
     import mixin from '../assets/js/mixin.js'
     import url from '../assets/js/api.js'
     import qs from 'qs'
     import axios from 'axios'
     let {id} = qs.parse(location.search.substr(1))
     let detailTab = ['商品详情', '本店成交']
+
     export default {
         name: "goods",
         data(){
@@ -486,6 +495,9 @@
         created() {
             this.getlists()
         },
+        mounted(){
+            let id2=this.$route.params.id
+        },
         methods: {
             getlists() {
                 axios.get(url.details, {
@@ -493,7 +505,6 @@
                         id
                     }
                 }).then(res => {
-                    console.log(res)
                     this.goodslist = res.data.data
                     this.bannerlists = []
                     this.goodslist.imgs.forEach(item => {  //将url中的数据改造成对象的格式

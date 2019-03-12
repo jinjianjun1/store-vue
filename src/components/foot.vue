@@ -1,30 +1,30 @@
 <template>
     <div class="bottom-nav">
       <ul>
-          <li :class="{active:currentItem===0}" @click="doSomething(0)">
-              <router-link :to="{name:'home'}">
-                  <i :class="'icon-home'"></i>
-                  <div>首页</div>
+          <li :class="{active:currentItem===index}" @click="changeView(index)" v-for="list,index in hrefmsg" :key="index">
+              <router-link :to="{name:list.name}">
+                  <i :class="list.icon"></i>
+                  <div>{{list.subname}}</div>
               </router-link>
           </li>
-          <li :class="{active:currentItem===1}" @click="doSomething(1)">
-              <router-link :to="{name:'category'}">
-                  <i :class="'icon-category'"></i>
-                  <div>分类</div>
-              </router-link>
-          </li>
-          <li :class="{active:currentItem===2}" @click="doSomething(2)">
-              <router-link :to="{name:'cart'}">
-                  <i :class="'icon-cart'"></i>
-                  <div>购物车</div>
-              </router-link>
-          </li>
-          <li :class="{active:currentItem===3}" @click="doSomething(3)">
-              <router-link :to="{name:'member'}">
-                  <i :class="'icon-user'"></i>
-                  <div>我</div>
-              </router-link>
-          </li>
+          <!--<li :class="{active:currentItem===1}" @click="doSomething(1)">-->
+              <!--<router-link :to="{name:'category'}">-->
+                  <!--<i :class="'icon-category'"></i>-->
+                  <!--<div>分类</div>-->
+              <!--</router-link>-->
+          <!--</li>-->
+          <!--<li :class="{active:currentItem===2}" @click="doSomething(2)">-->
+              <!--<router-link :to="{name:'cart'}">-->
+                  <!--<i :class="'icon-cart'"></i>-->
+                  <!--<div>购物车</div>-->
+              <!--</router-link>-->
+          <!--</li>-->
+          <!--<li :class="{active:currentItem===3}" @click="doSomething(3)">-->
+              <!--<router-link :to="{name:'member'}">-->
+                  <!--<i :class="'icon-user'"></i>-->
+                  <!--<div>我</div>-->
+              <!--</router-link>-->
+          <!--</li>-->
 
       </ul>
     </div>
@@ -33,29 +33,31 @@
 <script>
     import qs from 'qs'
 
-    let {index} = qs.parse(location.search.substr(1))//把路由上的参数?index=1 用qs解析成对象解构赋值给index
 
   let hrefmsg=[{
-      icon: 'icon-home', name: 'home'
+      icon: 'icon-home', name: 'home',subname:'首页'
   },{
-      icon: 'icon-category', name: 'category'
+      icon: 'icon-category', name: 'category',subname:'分类'
   },{
-      icon: 'icon-cart', name: 'cart'
+      icon: 'icon-cart', name: 'cart',subname:'购物车'
   },{
-      icon: 'icon-user', name: 'member'
+      icon: 'icon-user', name: 'member',subname:'我'
 }]
     export default {
         data(){
           return {
             hrefmsg,
-              currentItem:0
+              currentItem:0,
           }
         },
         methods:{
             doSomething(a){
                 this.currentItem=a
+            },
+            changeView(number){
+                this.currentItem=number
             }
-        }
+        },
     }
 </script>
 

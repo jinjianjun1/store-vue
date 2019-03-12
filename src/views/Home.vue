@@ -42,7 +42,7 @@
                             infinite-scroll-distance="20">
                             <li v-for="(list,index) in lists " :key='index'>
                                 <div class="goods-item">
-                                    <router-link to="goods"  >
+                                    <router-link :to="{name:'goods',params:{id:list.id}}"  >
                                         <div class="thumb img-box">
                                             <img class="fadeIn" :src="list.img">
                                         </div>
@@ -97,12 +97,12 @@
 
         },
         mounted(){
-            console.log(this.bannerlists);
         },
         methods:{
             getlists(){
                 if(this.allloaded===true) return;
                 this.loading=true;
+                console.log(this.loading);
                 axios.get(url.hotLists,{
                     params:{
                         pageNum:this.pageNum,
@@ -112,15 +112,14 @@
                     let currentlist =res.data.lists;
                     if(currentlist.length<this.pageSize){
                         this.allloaded=true
-                        console.log(this.allloaded);
                     }
                     if(this.lists){
                         this.lists= this.lists.concat(currentlist)
                     }else{
                         this.lists=currentlist
                     }
-                    this.loading=false;
-                    console.log(this.loading);
+                    this.loading=false
+                    console.log(this.loading,"11111");
                     this.pageNum++
                 })
             },

@@ -14,6 +14,11 @@ export default new Router({
       component: Home
     },
     {
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
       path: '/category',
       name: 'category',
       component: () => import('./views/Category.vue')
@@ -30,12 +35,12 @@ export default new Router({
 
     },
     {
-      path:'search',
+      path:'/search',
       name:'search',
       component:()=> import('./views/Search.vue')
     },
     {
-      path:'goods',
+      path:'/goods/:id',
       name:'goods',
       component:()=> import('./views/Goods.vue')
     },

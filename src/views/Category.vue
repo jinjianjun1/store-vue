@@ -30,17 +30,6 @@
             <div class="search-content" style="display: none;"></div>
             <div class="content" style="height: 617px;">
               <div class="class-nav">
-                <div id="scroll-nav" style="height: 100vh;">
-                  <ul class="nav" id="scroll-nav-content" style="height: 540px; transform: translate3d(0px, 0px, 0px);">
-                    <li class="category-name js-category-name "
-                        :data-cid="list.id" v-for="(list,index) in toplists"
-                        @click="getsublists(list.id,index)"
-                        :class="{active:index===topindex}"
-                    >{{list.name}}
-                    </li>
-
-                  </ul>
-                </div>
               </div>
               <div class="class-category">
                 <div id="scroll-main-wrap" class="main-content">
@@ -124,15 +113,14 @@
                   </ul>
                   <h3 class="category-title"> 热门分类 </h3>
                   <ul class="category-content">
-                    <li class="category-item js-category-item" data-item-id="list.id" :data-item-name="list.name"
-                        v-for="(list,index) in subData.categoryList">
+                    <router-link :to="{name:'goods',params:{}}">
+                      <li class="category-item js-category-item" data-item-id="list.id" :data-item-name="list.name"
+                          v-for="(list,index) in subData.categoryList">
                         <!-- @click="searchgoods(list)"-->
-                      <img :src="list.img" :alt="list.name" class="category-img">
-                      <span class="category-item-name">
-                水果            </span>
-                    </li>
-
-
+                        <img :src="list.img" :alt="list.name" class="category-img">
+                        <span class="category-item-name">水果</span>
+                      </li>
+                    </router-link>
                   </ul>
                 </div>
               </div>
@@ -140,7 +128,6 @@
           </div>
         </div>
       </div>
-
 
 </template>
 
@@ -193,9 +180,7 @@
           console.log(err)
         })
       },
-      // searchgoods(list) {
-      //   location.href = `search.html?id=${list.id}&keyword=${list.name}`
-      // }
+
     },
     mixins: [mixin]
   }
